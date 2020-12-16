@@ -42,16 +42,13 @@ class MainActivity : AppCompatActivity() {
                 it.addView(TextView(this).apply {
                     text = publication.title
                     textSize = 15.0f
-                })
-                it.addView(Button(this).apply {
-                    text = "Details"
                     setOnClickListener {
                         publicationActivityIntent.putExtra("publicationId", publication.id)
                         startActivity(publicationActivityIntent)
                     }
                 })
                 it.addView(Button(this).apply {
-                    text = "Create Review"
+                    text = "Review"
                     setOnClickListener {
                         createReviewActivityIntent.putExtra("publicationId", publication.id)
                         startActivity(createReviewActivityIntent)

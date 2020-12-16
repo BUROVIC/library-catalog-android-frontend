@@ -26,7 +26,6 @@
             android:layout_weight="0" />
 
         <TextView
-            android:text="Publisher:"
             android:layout_marginBottom="10dp"
             android:textSize="15sp"
             android:id="@+id/publisherTextView"
@@ -35,7 +34,6 @@
             android:layout_weight="0" />
 
         <TextView
-            android:text="Authors:"
             android:layout_marginBottom="10dp"
             android:textSize="15sp"
             android:id="@+id/authorsTextView"
@@ -43,20 +41,27 @@
             android:layout_width="fill_parent"
             android:layout_weight="0" />
 
-        <TextView
-            android:id="@+id/descriptionTextView"
-            android:layout_height="wrap_content"
+        <ScrollView
             android:layout_width="fill_parent"
-            android:layout_weight="0"
-            android:lines="4"
-            android:maxLines="4"
-            app:layout_constraintTop_toTopOf="@+id/titleTextView" />
+            android:layout_height="200dp">
 
-        <TableLayout
-            android:id="@+id/reviewsTableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:stretchColumns="1" />
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent" />
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TableLayout
+                android:id="@+id/reviewsTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1" />
+        </ScrollView>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
